@@ -37,11 +37,11 @@ git commit自动携带 prefix，毕淼每次提交commit都手动输入prefix，
 
 假如我本次提交内容，修改了mabilisCash下的若干文件，在调用`aup(名字可以自定义，setup中会说道) '修改了xxx'`，你会看到shell中出现一下提示：
 
-![image-20230606154307866](/Users/zy/selfBus/auto_prefix/imgs/1.png)
+![image-20230606154307866](https://github.com/gfzy9876/auto_prefix/blob/main/imgs/1.png?raw=true)
 
 同时在你的commit已经自动添加prefix了
 
-![image-20230606154420088](/Users/zy/selfBus/auto_prefix/imgs/2.png)
+![image-20230606154420088](https://github.com/gfzy9876/auto_prefix/blob/main/imgs/2.png?raw=true)
 
 # 安装
 
