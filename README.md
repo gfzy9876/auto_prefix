@@ -45,7 +45,8 @@ git commit自动携带 prefix，毕淼每次提交commit都手动输入prefix，
 
 # 安装
 
-## 1. 移动到项目根目录
+## 1. 克隆项目
+推荐 在项目根目录下克隆，方便之后维护
 
 ```sh
 git clone https://github.com/gfzy9876/auto_prefix.git
@@ -57,6 +58,7 @@ git clone https://github.com/gfzy9876/auto_prefix.git
 cd auto_prefix
 sh setup.sh
 ```
+setup.sh中的提示比较全面，应该没什么问题
 
 ## 3. 修改prefixConfig.json文件
 
