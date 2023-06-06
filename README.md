@@ -62,6 +62,7 @@ cd auto_prefix
 sh setup.sh
 ```
 setup.sh中的提示比较全面，应该没什么问题
+![image-20230606154420088](https://github.com/gfzy9876/auto_prefix/blob/main/imgs/3.png?raw=true)
 
 ## 3. 修改prefixConfig.json文件
 
