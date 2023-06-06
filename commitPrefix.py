@@ -1,6 +1,7 @@
 import subprocess
 import json
 import sys
+import os
 
 class Colors:
     RED = '\033[91m'
@@ -33,7 +34,8 @@ if len(sys.argv) <= 1:
     commit_msg = ''
 else:
     commit_msg = sys.argv[1]
-config_file_name = "prefixConfig.json"
+current_dir = os.path.dirname(os.path.abspath(__file__))
+config_file_name = f"{current_dir}/prefixConfig.json"
 prefixConfig = json.load(open(config_file_name))
 
 # git diff --name-only HEAD .
