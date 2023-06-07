@@ -46,14 +46,9 @@ git commit自动携带 prefix，避免每次提交commit都手动输入prefix，
 # 安装
 
 ## 1. 克隆项目
-推荐 在项目根目录下克隆，并在项目根目录的.gitignore文件添加`auto_prefix`，方便之后维护，以下是在项目根目录下clone auto_prefix的步骤：
-### 1.1. 移动到项目根目录，执行git clone
 ```sh
-cd 项目根目录
 git clone https://github.com/gfzy9876/auto_prefix.git
 ```
-### 1.2. 项目根目录.gitignore添加auto_prefix
-注意:) 如发现auto_prefix已经从工作区添加到暂存区，可调用`git rm --cached -f auto_prefix`从暂存区移除
 
 ## 2. 调用setup.sh
 
