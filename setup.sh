@@ -15,12 +15,8 @@ echo "\033[32m3. source \$HOME/.zshrc\033[0m"
 echo "如果你使用bash:"
 echo "\033[32m1. vim \$HOME/.bash_rc\033[0m"
 echo "\033[32m2. 把蓝色文字粘贴到文件中, 然后:wq保存\033[0m"
-echo "\033[32m3. source \$HOME/.bash_rc\033[0m"
+echo "\033[32m3. source \$HOME/.bash_rc\033[0m\n"
 
-echo "使用:"
-echo "\033[32m$prefix '我是提交的内容'\033[0m"
-
-echo "\n生成prefixConfig.json文件:"
 cat <<EOF > prefixConfig.json
 {
   "module文件名": "提交的prefix",
@@ -28,4 +24,7 @@ cat <<EOF > prefixConfig.json
   ]
 }
 EOF
+echo "已生成prefixConfig.json文件: \033[32m$current_abs_path/prefixConfig.json\033[0m 记得去配置\n"
 
+echo "使用:"
+echo "\033[32m$prefix '我是提交的内容'\033[0m"
