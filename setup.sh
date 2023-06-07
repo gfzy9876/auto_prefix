@@ -9,12 +9,12 @@ echo "\033[34malias $prefix=\"python $current_abs_path/commitPrefix.py \$1\"\033
 echo "我不知道你用的什么sh工具....."
 echo "如果你使用zsh:"
 echo "\033[32m1. vi \$HOME/.zshrc\033[0m"
-echo "\033[32m2. 把蓝色文字粘贴到文件中, 然后:wq保存\033[0m"
+echo "\033[32m2. 把\033[34m上面的蓝色文字\033[0m粘贴到文件中, 然后:wq保存\033[0m"
 echo "\033[32m3. source \$HOME/.zshrc\033[0m"
 
 echo "如果你使用bash:"
 echo "\033[32m1. vim \$HOME/.bash_rc\033[0m"
-echo "\033[32m2. 把蓝色文字粘贴到文件中, 然后:wq保存\033[0m"
+echo "\033[32m2. 把\033[34m上面的蓝色文字\033[0m粘贴到文件中, 然后:wq保存\033[0m"
 echo "\033[32m3. source \$HOME/.bash_rc\033[0m\n"
 
 cat <<EOF > prefixConfig.json
