@@ -21,7 +21,8 @@ cat <<EOF > prefixConfig.json
 {
   "module文件名": "提交的prefix",
   "whiteList": [
-  ]
+  ],
+  "multiplePrefix": false
 }
 EOF
 echo "已生成prefixConfig.json文件: \033[32m$current_abs_path/prefixConfig.json\033[0m 记得去配置\n"
