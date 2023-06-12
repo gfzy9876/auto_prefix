@@ -62,6 +62,7 @@ setup.sh中的提示比较全面，应该没什么问题
 ## 3. 修改prefixConfig.json文件
 
 以菲律宾为例，key为项目module名，value为git 提交commit的前缀
+
 multiplePrefix：是否支持同时修改多个module的代码，如为true，则修改多个mudule内容时，prefix为多个：
 如修改了`mabilisCash`、`finCash`项目的代码，最后提交记录为：`[MabCash] [FinCash] 提交记录xxxx`
 
