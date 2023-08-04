@@ -22,7 +22,7 @@ git commit自动携带 prefix，避免每次提交commit都手动输入prefix，
 ```json
 {
   "mabilisCash": "MabCash",
-  "finCash": "FinCash",
+  "finCash": "THCash",
   "moneyMall": "MOMCash",
   "whiteList": [
   ]
