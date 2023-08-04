@@ -14,7 +14,7 @@ git commit自动携带 prefix，避免每次提交commit都手动输入prefix，
 | ----------- | ---------------------- |
 | mabilisCash | [MabCash]              |
 | pesoagad    | [PHCash]               |
-| Fincash     | [FinCash]              |
+| Fincash     | [THCash]              |
 | moneyMall   | [MOMCash]              |
 
 对应prefixConfig.json如下：
