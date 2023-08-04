@@ -1,6 +1,6 @@
 # auto_prefix
 
-git commit自动携带 prefix，避免每次提交commit都手动输入prefix，防止输错。
+git commit自动携带 prefix，避免每次提交commit都手动输入prefix，防止忘记或输错。
 
 # 工作原理
 
