@@ -35,8 +35,11 @@ if len(sys.argv) <= 1 or len(sys.argv[1].strip()) == 0:
     exit()
 else:
     commit_msg = sys.argv[1]
-current_dir = os.path.dirname(os.path.abspath(__file__))
-config_file_name = f"{current_dir}/prefixConfig.json"
+current_dir = os.getcwd()
+config_file_name = f"{current_dir}/.aup_config.json"
+if not os.path.exists(config_file_name):
+    error(f"${config_file_name} 目录下不存在 .aup_config.json 文件, 请添加: 参考格式(https://github.com/gfzy9876/auto_prefix)")
+    exit()
 prefixConfig = json.load(open(config_file_name))
 
 # git diff --name-only HEAD .
@@ -49,12 +52,13 @@ if len(changed_file_dir) == 0:
     active('无修改内容')
     exit()
 
+prefixObj = prefixConfig['prefix']
 ready_commit_prefix_list = []
 for changed_file in changed_file_dir:
-    if changed_file in prefixConfig:
+    if changed_file in prefixObj:
         info(changed_file + "在prefix配置文件中, prefix为: " +
-             prefixConfig[changed_file])
-        ready_commit_prefix_list.append(prefixConfig[changed_file])
+             prefixObj[changed_file])
+        ready_commit_prefix_list.append(prefixObj[changed_file])
 
     else:
         if ('whiteList' in prefixConfig
@@ -75,7 +79,8 @@ elif (len(ready_commit_prefix_list) == 1 or prefixConfig['multiplePrefix']):
     # git add .
     subprocess.run(["git", "add", "."])
 
-    prefixWithBrackets = ['[' + item + ']' for item in ready_commit_prefix_list]
+    prefixWithBrackets = [
+        '[' + item + ']' for item in ready_commit_prefix_list]
 
     prefix = ' '.join(prefixWithBrackets)
     command = ['git', 'commit']
