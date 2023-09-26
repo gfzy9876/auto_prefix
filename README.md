@@ -60,7 +60,7 @@ setup.sh 中的提示比较全面，应该没什么问题
 ![image-20230606154420088](https://github.com/gfzy9876/auto_prefix/blob/main/imgs/setup.png?raw=true)
 
 ## 3. 在项目中创建 .aup_config.json 文件, 配置说明
-
+建议把配置文件放到项目根目录下，这样可以共创共建，保证同项目组成员配置一致
 ```json
 {
     "prefix": {
