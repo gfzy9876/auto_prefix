@@ -18,7 +18,7 @@ git commit 自动携带 prefix，避免每次提交 commit 都手动输入 prefi
 | moneyMall   | [MOMCash]                |
 
 对应 .aup_config.json 如下：
-
+会在当前目录下查找.aup_config.json文件，没有则无法工作
 ```json
 {
     "prefix": {
@@ -60,7 +60,7 @@ setup.sh 中的提示比较全面，应该没什么问题
 ![image-20230606154420088](https://github.com/gfzy9876/auto_prefix/blob/main/imgs/setup.png?raw=true)
 
 ## 3. 在项目中创建 .aup_config.json 文件, 配置说明
-建议把配置文件放到项目根目录下，这样可以共创共建，保证同项目组成员配置一致
+将配置文件放到项目根目录下，这样可以共创共建，保证同项目组成员配置一致
 ```json
 {
     "prefix": {
