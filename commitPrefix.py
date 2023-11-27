@@ -29,6 +29,9 @@ def info(msg):
 def active(msg):
     print(Colors.GREEN + msg + Colors.RESET)
 
+def isAmend():
+    args = sys.argv[1:]
+    return '-amend' in args or '--amend' in args
 
 if len(sys.argv) <= 1 or len(sys.argv[1].strip()) == 0:
     error('注意: commit 未指定输入内容')
@@ -79,12 +82,15 @@ elif (len(ready_commit_prefix_list) == 1 or prefixConfig['multiplePrefix']):
     # git add .
     subprocess.run(["git", "add", "."])
 
-    prefixWithBrackets = [
-        '[' + item + ']' for item in ready_commit_prefix_list]
+    if isAmend():
+        command = ['git', 'commit', '--amend', '--no-edit']
+    else:
+        prefixWithBrackets = [
+            '[' + item + ']' for item in ready_commit_prefix_list]
 
-    prefix = ' '.join(prefixWithBrackets)
-    command = ['git', 'commit']
-    command.extend(['-m', f"{prefix} {commit_msg}"])
+        prefix = ' '.join(prefixWithBrackets)
+        command = ['git', 'commit']
+        command.extend(['-m', f"{prefix} {commit_msg}"])
 
     active("Exe command:    " + ' '.join(command))
     result = subprocess.run(command, capture_output=True, text=True)
